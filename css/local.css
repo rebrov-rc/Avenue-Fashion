@@ -1,0 +1,31 @@
+html, * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:before, :after, :hover {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main-top-panel {
+  width: 100%;
+  background-color: #333333;
+}
+
+.main-top-panel-wrap {
+  margin: auto;
+  max-width: 60%;
+  width: 90%;
+  height: calc(2em);
+}
+/*# sourceMappingURL=local.css.map */

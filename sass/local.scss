@@ -1,0 +1,72 @@
+// ==== IMPORTS ======================>
+
+
+// ==== FONTS ======================>
+
+
+// ==== MIXINS ======================>
+@mixin flex-reg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-cul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@mixin brd {
+    border: solid 1px #aaa59f;
+}
+
+// ==== VARS ======================>
+
+
+// ==== ANIMSTIONS ======================>
+
+
+// ==== BODY ======================>
+html, *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:before, :after, :hover{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// ==== MAIN CODE ==============================>
+// ==== HEADER ==============================>
+.main-top-panel{
+    width: 100%;
+    background-color: #333333;
+}
+.main-top-panel-wrap{
+    margin: auto;
+    max-width: 60%;
+    width: 90%;
+    height: calc(2em);
+
+}
+// ==== CONTENT ==============================>
+
+// ==== FOOTER ==============================>
+
+// =============================================>
+// ==== DESK TOP ADAPTIVE ======================>
+
+
+// ===========================================>
+// ==== MOBILE ADAPTIVE ======================>
+
+
+
+
+
+// =============== END ==============================>
