@@ -263,10 +263,20 @@ li a {
 
 .search label {
   width: 70%;
+  border: 1px solid #e7e7e7;
+  background-color: #f8f8f8;
+  padding: 0 0.2em;
 }
 
 .search .input-search {
   width: 80%;
+  border: none;
+  background-color: #f8f8f8;
+}
+
+.fa-search {
+  color: #989898;
+  font-size: 14px;
 }
 
 .fall-sale-wrap {
