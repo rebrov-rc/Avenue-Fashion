@@ -1,1 +1,67 @@
-/* No CSS *//*# sourceMappingURL=footer.css.map */
+footer {
+  width: 100%;
+}
+
+.full-info {
+  background-color: #f8f8f8;
+}
+
+.bottom-info {
+  background-color: #333333;
+}
+
+.full-info-container, .bottom-info-center {
+  width: 70%;
+}
+
+.full-info-container {
+  margin: 2.5rem 0;
+}
+
+.f-text {
+  color: #777777;
+  font-family: Montserrat;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 38px;
+}
+
+.f-text span + span {
+  margin-left: 1.2em;
+}
+
+.columns a {
+  font-size: .7em;
+  color: #727272;
+  text-decoration: none;
+}
+
+.baners-wrap {
+  margin-top: 2.5rem;
+}
+
+.f-baners {
+  width: 430px;
+  height: 150px;
+  background-color: #333333;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 26px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.f-baners:hover {
+  background-color: #00c8c8;
+}
+
+.f-baners a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-baner__socials a + a {
+  margin-left: 2rem;
+}
+/*# sourceMappingURL=footer.css.map */
