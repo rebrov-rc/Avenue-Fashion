@@ -29,9 +29,12 @@
 }
 
 .customer-panel-wrap {
-  width: 100%;
+  max-width: 1287px;
+  width: 97%;
   height: calc(1em + 1vw);
   background-color: #333333;
+  position: fixed;
+  z-index: 10000;
 }
 
 .central-customer-panel {
@@ -552,6 +555,7 @@ body {
 .baner {
   width: 100%;
   height: calc(30em + 15vw);
+  padding-top: calc(1em + 1vw);
   background-color: #f8f8f8;
   position: relative;
 }
