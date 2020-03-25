@@ -4,7 +4,7 @@ window.onscroll = function drop () {
     if ( window.pageYOffset > 100 ) {
         panel.classList.add('header_fixed');
         baner.style.paddingTop = 'calc(1em + 1vw)';
-    }else {
+    }else if (window.pageYOffset === 0){
         panel.classList.remove('header_fixed');
         baner.style.paddingTop = '0';
 
