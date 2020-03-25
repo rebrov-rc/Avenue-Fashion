@@ -66,8 +66,10 @@
     width: 97%;
     // 
     z-index: 10000;
-
-
+}
+.opacityPanel {
+    opacity: 0.5;
+    transition: all 1s;
 }
 
 .central-customer-panel{

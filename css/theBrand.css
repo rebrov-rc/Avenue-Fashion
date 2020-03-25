@@ -64,6 +64,12 @@
   z-index: 10000;
 }
 
+.opacityPanel {
+  opacity: 0.5;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
 .central-customer-panel {
   display: -webkit-box;
   display: -ms-flexbox;
