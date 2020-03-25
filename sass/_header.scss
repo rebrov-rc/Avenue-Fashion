@@ -37,7 +37,14 @@
 
     }
 }
-
+@keyframes header_drop {
+    0% {
+        transform: translateY( -110% )
+    }
+    100%{
+        transform: translateY( 0 )
+    }
+}
 // ==== HEADER =================================>
 .header{
     position: relative;
@@ -46,14 +53,23 @@
 
 .customer-panel-wrap{
     max-width: 1287px;
-    width: 97%;
+    // width: 97%;
     height: calc(1em + 1vw);
     background-color: #333333;
     // 
-    position: fixed;
-    z-index: 10000;
 
 }
+.header_fixed{
+    position: fixed;
+    animation:header_drop 1.2s;
+
+    width: 97%;
+    // 
+    z-index: 10000;
+
+
+}
+
 .central-customer-panel{
     @include flexVar(none, space-between, center);
     margin: auto;

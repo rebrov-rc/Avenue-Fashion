@@ -24,16 +24,43 @@
   }
 }
 
+@-webkit-keyframes header_drop {
+  0% {
+    -webkit-transform: translateY(-110%);
+            transform: translateY(-110%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes header_drop {
+  0% {
+    -webkit-transform: translateY(-110%);
+            transform: translateY(-110%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 .header {
   position: relative;
 }
 
 .customer-panel-wrap {
   max-width: 1287px;
-  width: 97%;
   height: calc(1em + 1vw);
   background-color: #333333;
+}
+
+.header_fixed {
   position: fixed;
+  -webkit-animation: header_drop 1.2s;
+          animation: header_drop 1.2s;
+  width: 97%;
   z-index: 10000;
 }
 
