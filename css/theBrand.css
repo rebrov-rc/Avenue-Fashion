@@ -218,6 +218,7 @@
   display: block;
   -webkit-animation: drop-nav .3s ease-out;
           animation: drop-nav .3s ease-out;
+  z-index: 99;
 }
 
 .links-nav-wrap ul li .drop-panel {
@@ -360,6 +361,24 @@ li a {
   font-weight: 400;
   letter-spacing: 1.2px;
   margin-left: .5em;
+}
+
+.baner-2 {
+  height: 18em;
+  position: relative;
+}
+
+.baner-2-title-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(49, 62, 65, 0.561);
+}
+
+.baner-2-title-wrap .title {
+  color: #ffffff;
 }
 
 footer {
@@ -581,7 +600,33 @@ body {
           align-items: center;
 }
 
+.img-fit {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
 .nav {
   background-color: #f8f8f8;
+}
+
+.brands-wrap-center {
+  width: 70%;
+  margin: 4rem auto;
+}
+
+.brands-left-side {
+  max-width: 50%;
+}
+
+.brands-right-side__3-block {
+  padding: 1rem;
+}
+
+.brands-right-side__3-block img {
+  width: 100px;
 }
 /*# sourceMappingURL=theBrand.css.map */

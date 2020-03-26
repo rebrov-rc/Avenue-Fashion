@@ -218,6 +218,7 @@
   display: block;
   -webkit-animation: drop-nav .3s ease-out;
           animation: drop-nav .3s ease-out;
+  z-index: 99;
 }
 
 .links-nav-wrap ul li .drop-panel {

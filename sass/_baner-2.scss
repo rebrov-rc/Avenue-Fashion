@@ -1,0 +1,19 @@
+
+
+.baner-2{
+    height: 18em;
+    // 
+    position: relative;
+}
+.baner-2-title-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // 
+    background-color: rgba(49, 62, 65, 0.561);
+    .title{
+        color: #ffffff;
+    }
+}
