@@ -146,6 +146,12 @@
   margin: auto;
 }
 
+.addNumberOfProduct {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .nav {
   width: 100%;
   height: calc(3em + 2vw);

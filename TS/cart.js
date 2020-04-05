@@ -1,9 +1,7 @@
-const btnOfCart: NodeListOf<Element> = document.querySelectorAll('.cart-i');
-const cart: HTMLElement = document.querySelector('.addNumberOfProduct');
-let addNumInCart: number = 0; 
-
-// console.log(btnOfCart.length)
-for (let i  = 0; i < btnOfCart.length; i++) {
+var btnOfCart = document.querySelectorAll('.cart-i');
+var cart = document.querySelector('.addNumberOfProduct');
+var addNumInCart = 0;
+var _loop_1 = function (i) {
     btnOfCart[i].onclick = addProd;
     function addProd() {
         addNumInCart = addNumInCart + 1;
@@ -13,24 +11,25 @@ for (let i  = 0; i < btnOfCart.length; i++) {
         cart.style.borderRadius = '50%';
         cart.style.width = '1.5em';
         cart.style.height = '1.5em';
-        console.log(btnOfCart[i] + '-' + i)
+        console.log(btnOfCart[i] + '-' + i);
         // 
         btnOfCart[i].style.background = '#b64b4bf6';
         btnOfCart[i].style.color = '#ffffff';
         btnOfCart[i].style.width = '5em';
         btnOfCart[i].style.borderRadius = '10%';
         btnOfCart[i].innerHTML = 'оплата';
-    } 
-    // console.log(btnOfCart[i])
-}
-
-const btnCustomerList: HTMLElement = document.querySelector('.customer-cart-wrap');
-btnCustomerList.onclick = () => {
-    if (addNumInCart > 0){
-        // btnCustomerList.add.
-    } else {
-        alert('Корзина пуста')
     }
+};
+// console.log(btnOfCart.length)
+for (var i = 0; i < btnOfCart.length; i++) {
+    _loop_1(i);
 }
-
-
+var btnCustomerList = document.querySelector('.customer-cart-wrap');
+btnCustomerList.onclick = function () {
+    if (addNumInCart > 0) {
+        // btnCustomerList.add.
+    }
+    else {
+        alert('Корзина пуста');
+    }
+};
