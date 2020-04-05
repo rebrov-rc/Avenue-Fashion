@@ -1,16 +1,16 @@
 var btnOfCart = document.querySelectorAll('.cart-i');
-var cart = document.querySelector('.addNumberOfProduct');
+var cart1 = document.querySelector('.addNumberOfProduct');
 var addNumInCart = 0;
 var _loop_1 = function (i) {
     btnOfCart[i].onclick = addProd;
     function addProd() {
         addNumInCart = addNumInCart + 1;
-        cart.innerHTML = addNumInCart;
-        cart.style.background = '#b67b4bf6';
-        cart.style.justifyContent = 'center';
-        cart.style.borderRadius = '50%';
-        cart.style.width = '1.5em';
-        cart.style.height = '1.5em';
+        cart1.innerHTML = addNumInCart;
+        cart1.style.background = '#b67b4bf6';
+        cart1.style.justifyContent = 'center';
+        cart1.style.borderRadius = '50%';
+        cart1.style.width = '1.5em';
+        cart1.style.height = '1.5em';
         console.log(btnOfCart[i] + '-' + i);
         // 
         btnOfCart[i].style.background = '#b64b4bf6';
