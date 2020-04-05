@@ -6,20 +6,25 @@ let addNumInCart: number = 0;
 for (let i  = 0; i < btnOfCart.length; i++) {
     btnOfCart[i].onclick = addProd;
     function addProd() {
-        addNumInCart = addNumInCart  + 1;
-        cart1.innerHTML = addNumInCart;
-        cart1.style.background = '#b67b4bf6';
-        cart1.style.justifyContent = 'center';
-        cart1.style.borderRadius = '50%';
-        cart1.style.width = '1.5em';
-        cart1.style.height = '1.5em';
-        console.log(btnOfCart[i] + '-' + i)
-        // 
-        btnOfCart[i].style.background = '#b64b4bf6';
-        btnOfCart[i].style.color = '#ffffff';
-        btnOfCart[i].style.width = '5em';
-        btnOfCart[i].style.borderRadius = '10%';
-        btnOfCart[i].innerHTML = 'оплата';
+        let e = btnOfCart[i].innerHTML;
+        if ( e === 'оплата' ) {
+
+        }else {
+            addNumInCart = addNumInCart  + 1;
+            cart1.innerHTML = addNumInCart;
+            cart1.style.background = '#d38b50f6';
+            cart1.style.justifyContent = 'center';
+            cart1.style.borderRadius = '50%';
+            cart1.style.width = '1.5em';
+            cart1.style.height = '1.5em';
+            console.log(btnOfCart[i] + '-' + i)
+            // 
+            btnOfCart[i].style.background = '#d38b50f6';
+            btnOfCart[i].style.color = '#ffffff';
+            btnOfCart[i].style.width = '5em';
+            btnOfCart[i].style.borderRadius = '10%';
+            btnOfCart[i].innerHTML = 'оплата';
+        }
     } 
     // console.log(btnOfCart[i])
 }
@@ -33,4 +38,26 @@ btnCustomerList.onclick = () => {
     }
 }
 
+// =========================>
+const like: NodeListOf<Element> = document.querySelectorAll('.like');
+const heart: NodeListOf<Element> = document.querySelector('.addNumberOfProduct');
 
+
+for (let i  = 0; i < like.length; i++) {
+    like[i].onclick = addLike;
+    function addLike() {
+        // 
+        let ppp = like[i].style.background;
+        // like[i].style.color = '#ffffff';
+        if ( ppp === 'rgba(211, 139, 80, 0.965)' ) {
+            like[i].style.background = '';
+            
+        } else {
+            like[i].style.background = '#d38b50f6';
+            
+        }
+        
+
+    } 
+    // console.log(btnOfCart[i])
+}
