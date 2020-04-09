@@ -1,3 +1,6 @@
+let arrForCart = [];
+let cartStorage = localStorage.setItem('cart', arrForCart);
+
 var btnOfCart = document.querySelectorAll('.cart-i');
 var cart1 = document.querySelector('.addNumberOfProduct');
 var addNumInCart = 0;
@@ -9,6 +12,7 @@ var _loop_1 = function (i) {
         }
         else {
             addNumInCart = addNumInCart + 1;
+            // cartStorage = addNumInCart; // localStorage
             cart1.innerHTML = addNumInCart;
             cart1.style.background = '#d38b50f6';
             cart1.style.justifyContent = 'center';
@@ -22,6 +26,7 @@ var _loop_1 = function (i) {
             btnOfCart[i].style.width = '5em';
             btnOfCart[i].style.borderRadius = '10%';
             btnOfCart[i].innerHTML = 'оплата';
+
         }
     }
 };
