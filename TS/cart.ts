@@ -5,10 +5,12 @@ let addNumInCart: number = 0;
 
 
 
-let a1: string;
 // let arrForCart: any[] = [0], color: string, just: string, bord: string, w:string, 
 // h: string;
 // localStorage.getItem('cart');
+
+
+
 
 
 cart1.innerHTML = localStorage.getItem('cart')
@@ -38,11 +40,12 @@ for (let i  = 0; i < btnOfCart.length; i++) {
             localStorage.h = cart1.style.height = '1.5em';
             // console.log(btnOfCart[i] + '-' + i)
             // 
-            btnOfCart[i].style.background = '#d38b50f6';
-            btnOfCart[i].style.color = '#ffffff';
-            btnOfCart[i].style.width = '5em';
-            btnOfCart[i].style.borderRadius = '10%';
-            btnOfCart[i].innerHTML = 'оплата';
+            localStorage.btnBack = btnOfCart[i].style.background = '#d38b50f6';
+            localStorage.btnColor = btnOfCart[i].style.color = '#ffffff';
+            localStorage.btnW = btnOfCart[i].style.width = '5em';
+            localStorage.btnBord = btnOfCart[i].style.borderRadius = '10%';
+            localStorage.btnInner = btnOfCart[i].innerHTML = 'оплата';
+            // localStorage.btnInner = '456'; 
             // ====
 
         }
@@ -62,9 +65,18 @@ btnCustomerList.onclick = () => {
 // =========================>
 const like: NodeListOf<Element> = document.querySelectorAll('.like');
 const heart: NodeListOf<Element> = document.querySelector('.addNumberOfProduct');
+let likeIndex: (number| string)[] = [];
 
+for ( let i:number; i < likeIndex.length; i++ ) {
+    console.log(likeIndex);
+}
 
 for (let i  = 0; i < like.length; i++) {
+    // if (like[i]) {
+    //     like[i].style.background = '#d38b50f6';
+    // }
+
+
     like[i].onclick = addLike;
     function addLike() {
         // 
@@ -72,16 +84,22 @@ for (let i  = 0; i < like.length; i++) {
         // like[i].style.color = '#ffffff';
         if ( ppp === 'rgba(211, 139, 80, 0.965)' ) {
             like[i].style.background = '';
+            // likeIndex.pop(i);
+            // likeIndex[i] = null;
+            // console.log(likeIndex)
             
         } else {
             like[i].style.background = '#d38b50f6';
+            // likeIndex.push(i);
+            likeIndex[i] = i
+            localStorage.setItem('key', likeIndex);
+            // console.log(likeIndex)
             
         }
         
+        console.log(likeIndex)
 
     } 
     // console.log(btnOfCart[i])
 }
-
-
 

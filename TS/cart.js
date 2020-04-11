@@ -2,15 +2,15 @@
 var btnOfCart = document.querySelectorAll('.cart-i');
 var cart1 = document.querySelector('.addNumberOfProduct');
 var addNumInCart = 0;
-var a1;
-var arrForCart = [0], color, just, bord, w, h;
+// let arrForCart: any[] = [0], color: string, just: string, bord: string, w:string, 
+// h: string;
 // localStorage.getItem('cart');
-cart1.innerHTML = localStorage.getItem('cart', arrForCart);
-cart1.style.background = localStorage.getItem('color', color);
-cart1.style.justifyContent = localStorage.getItem('just', just);
-cart1.style.borderRadius = localStorage.getItem('bord', bord);
-cart1.style.width = localStorage.getItem('w', w);
-cart1.style.height = localStorage.getItem('h', h);
+cart1.innerHTML = localStorage.getItem('cart');
+cart1.style.background = localStorage.getItem('color');
+cart1.style.justifyContent = localStorage.getItem('just');
+cart1.style.borderRadius = localStorage.getItem('bord');
+cart1.style.width = localStorage.getItem('w');
+cart1.style.height = localStorage.getItem('h');
 var _loop_1 = function (i) {
     btnOfCart[i].onclick = addProd; // Включается функция
     function addProd() {
@@ -20,29 +20,21 @@ var _loop_1 = function (i) {
         else {
             addNumInCart = addNumInCart + 1;
             cart1.innerHTML = addNumInCart; // ДОБАВИЛАСЬ ЦИФРА В КОРЗИНУ
-            color = cart1.style.background = '#d38b50f6';
-            just = cart1.style.justifyContent = 'center';
-            bord = cart1.style.borderRadius = '50%';
-            w = cart1.style.width = '1.5em';
-            h = cart1.style.height = '1.5em';
+            localStorage.cart = cart1.innerHTML;
+            localStorage.color = cart1.style.background = '#d38b50f6';
+            localStorage.just = cart1.style.justifyContent = 'center';
+            localStorage.bord = cart1.style.borderRadius = '50%';
+            localStorage.w = cart1.style.width = '1.5em';
+            localStorage.h = cart1.style.height = '1.5em';
             // console.log(btnOfCart[i] + '-' + i)
             // 
-            btnOfCart[i].style.background = '#d38b50f6';
-            btnOfCart[i].style.color = '#ffffff';
-            btnOfCart[i].style.width = '5em';
-            btnOfCart[i].style.borderRadius = '10%';
-            btnOfCart[i].innerHTML = 'оплата';
+            localStorage.btnBack = btnOfCart[i].style.background = '#d38b50f6';
+            localStorage.btnColor = btnOfCart[i].style.color = '#ffffff';
+            localStorage.btnW = btnOfCart[i].style.width = '5em';
+            localStorage.btnBord = btnOfCart[i].style.borderRadius = '10%';
+            localStorage.btnInner = btnOfCart[i].innerHTML = 'оплата';
+            // localStorage.btnInner = '456'; 
             // ====
-            // ===
-            arrForCart[0] = cart1.innerHTML;
-            // ===
-            localStorage.setItem('cart', arrForCart);
-            localStorage.setItem('color', color);
-            localStorage.setItem('just', just);
-            localStorage.setItem('bord', bord);
-            localStorage.setItem('w', w);
-            localStorage.setItem('h', h);
-            // console.log(arrForCart)
         }
     }
 };
@@ -62,7 +54,14 @@ btnCustomerList.onclick = function () {
 // =========================>
 var like = document.querySelectorAll('.like');
 var heart = document.querySelector('.addNumberOfProduct');
+var likeIndex = [];
+for (var i = void 0; i < likeIndex.length; i++) {
+    console.log(likeIndex);
+}
 var _loop_2 = function (i) {
+    // if (like[i]) {
+    //     like[i].style.background = '#d38b50f6';
+    // }
     like[i].onclick = addLike;
     function addLike() {
         // 
@@ -70,10 +69,18 @@ var _loop_2 = function (i) {
         // like[i].style.color = '#ffffff';
         if (ppp === 'rgba(211, 139, 80, 0.965)') {
             like[i].style.background = '';
+            // likeIndex.pop(i);
+            // likeIndex[i] = null;
+            // console.log(likeIndex)
         }
         else {
             like[i].style.background = '#d38b50f6';
+            // likeIndex.push(i);
+            likeIndex[i] = i;
+            localStorage.setItem('key', likeIndex);
+            // console.log(likeIndex)
         }
+        console.log(likeIndex);
     }
 };
 for (var i = 0; i < like.length; i++) {
